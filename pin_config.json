@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "author": "Matthew Chu",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 94.34,
+      "left": 186.1,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 329.54,
+      "left": 125.03,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled2",
+      "top": 454.34,
+      "left": 125.03,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 109.03, "left": 380.8, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -290, "left": 34.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:12", "keypad1:R1", "green", [ "v-9.45", "h-57.6" ] ],
+    [ "esp:14", "keypad1:R2", "green", [ "v-19.05", "h-57.2" ] ],
+    [ "esp:27", "keypad1:R3", "green", [ "v-28.65", "h-57.3" ] ],
+    [ "keypad1:R4", "esp:26", "green", [ "v67.2", "h67" ] ],
+    [ "esp:25", "keypad1:C1", "orange", [ "v-47.85", "h-67.2" ] ],
+    [ "keypad1:C2", "esp:33", "orange", [ "v48", "h67.2" ] ],
+    [ "keypad1:C3", "esp:32", "orange", [ "v38.4", "h67.05" ] ],
+    [ "esp:35", "keypad1:C4", "orange", [ "v-76.65", "h-67.2" ] ],
+    [ "esp:13", "oled2:SDA", "blue", [ "v-28.65", "h-134.4", "v307.2", "h143.93" ] ],
+    [ "esp:23", "oled2:SCL", "green", [ "v9.6", "h-249.6", "v182.4", "h124.5" ] ],
+    [ "esp:22", "oled1:SCL", "green", [ "v67.2", "h-115.2", "v19.2" ] ],
+    [ "esp:21", "oled1:SDA", "blue", [ "v57.6", "h-76.8", "v28.8" ] ],
+    [ "esp:15", "lcd1:RS", "violet", [ "v19.2", "h268.8" ] ],
+    [ "lcd1:D4", "esp:4", "purple", [ "v38.4", "h-307.2" ] ],
+    [ "esp:5", "lcd1:D5", "magenta", [ "v38.4", "h288", "v9.6" ] ],
+    [ "esp:18", "lcd1:D6", "white", [ "v48", "h288" ] ],
+    [ "esp:19", "lcd1:D7", "gold", [ "v86.4", "h287.7" ] ],
+    [ "esp:GND.2", "oled1:GND", "red", [ "v76.8", "h-153.6" ] ],
+    [ "esp:GND.2", "oled2:GND", "red", [ "v201.6", "h-153.6" ] ],
+    [ "esp:3V3", "oled1:VCC", "white", [ "v-19.05", "h-249.6", "v182.4", "h105.6" ] ],
+    [ "esp:3V3", "oled2:VCC", "white", [ "v-19.05", "h-249.6", "v288", "h105.6" ] ],
+    [ "esp:GND.2", "lcd1:VSS", "red", [ "v9.6", "h96" ] ],
+    [ "esp:3V3", "lcd1:VDD", "white", [ "v-9.45", "h48", "v105.6", "h57.6" ] ]
+  ],
+  "dependencies": {}
+}
