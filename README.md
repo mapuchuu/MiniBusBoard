@@ -1,4 +1,4 @@
-MiniBusBoard Project
+## MiniBusBoard Project
 
 An ESP32 project I built to display live arrivals 
 for any bus stop in Seattle, but it also works for any 
