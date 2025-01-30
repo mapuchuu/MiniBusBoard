@@ -18,6 +18,7 @@ I have also attached a JSON file for pin configurations.
 
 For further details, see my linkedin https://www.linkedin.com/in/matthew-chu-chu/
 
-You can recieve an OBA API key within a few days from
+If you want an OBA API Key, check this website:
 https://developer.onebusaway.org/api/where
+
 
