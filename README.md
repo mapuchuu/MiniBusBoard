@@ -1,7 +1,9 @@
 ## MiniBusBoard 🚌 
 ### Real-time Bus Arrival Display with ESP32, AWS Lambda, API Gateway, and OneBusAway API
 
-MiniBusBoard is a budget ESP32-powered display that provides live bus arrivals for any stop in Seattle. Unlike standard transit apps, MBB filters out *scheduled* arrivals, so users only see buses that are tied to real buses with updating GPS. This project was inspired by the lack of real-time arrival boards in my metro region (See how people feel about the current UX design: https://www.reddit.com/r/Seattle/comments/1c4o203/new_bus_arrival_signs/). With just $16 worth of hardware, MiniBusBoard brings accurate arrival times to any stop.
+MiniBusBoard is a budget ESP32-powered display that provides live bus arrivals for any stop in Seattle. Unlike standard transit apps, MBB filters out *scheduled* arrivals, so users only see buses that are tied to real buses with updating GPS. 
+
+Inspired by the lack of real-time arrival boards in my metro area (see what locals think of the current UX: https://shorturl.at/yv7r3), MiniBusBoard offers a reliable, low-cost solution for just $16 in hardware.
 
  - 1x ESP32 Microcontroller
  - 2x SSD1306OLED Display
